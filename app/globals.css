@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 44 76% 94%;
+    --foreground: 203 23% 18%;
+    --card: 44 76% 96%;
+    --card-foreground: 203 23% 18%;
+    --popover: 44 76% 94%;
+    --popover-foreground: 203 23% 18%;
+    --primary: 21 100% 51%;
+    --primary-foreground: 44 76% 94%;
+    --secondary: 184 85% 18%;
+    --secondary-foreground: 44 76% 94%;
+    --muted: 191 12% 85%;
+    --muted-foreground: 203 23% 30%;
+    --accent: 44 85% 72%;
+    --accent-foreground: 203 23% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 191 12% 80%;
+    --input: 191 12% 80%;
+    --ring: 21 100% 51%;
+    --radius: 1rem;
+  }
+  .dark {
+    --background: 203 23% 18%;
+    --foreground: 44 76% 94%;
+    --card: 203 23% 22%;
+    --card-foreground: 44 76% 94%;
+    --popover: 203 23% 18%;
+    --popover-foreground: 44 76% 94%;
+    --primary: 21 100% 51%;
+    --primary-foreground: 44 76% 94%;
+    --secondary: 184 85% 18%;
+    --secondary-foreground: 44 76% 94%;
+    --muted: 203 23% 25%;
+    --muted-foreground: 191 12% 70%;
+    --accent: 44 85% 72%;
+    --accent-foreground: 203 23% 18%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 203 23% 25%;
+    --input: 203 23% 25%;
+    --ring: 21 100% 51%;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+.glass {
+  background: rgba(250, 247, 237, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(191, 203, 206, 0.35);
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  background-color: hsl(var(--primary));
+  width: 100%;
+}
+
